@@ -2,7 +2,7 @@
 const $ = s => document.querySelector(s);
 const menu = $('.menu-toggle');
 menu.addEventListener('click', () => { const open=menu.getAttribute('aria-expanded')==='true'; menu.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-label',open?'Ouvrir la navigation':'Fermer la navigation');$('#mobile-nav').hidden=open; });
-$('#mobile-nav').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');$('#mobile-nav').hidden=true;}));
+$('#mobile-nav').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Ouvrir la navigation');$('#mobile-nav').hidden=true;}));
 const services={
  renovation:{photo:'assets/interior.webp',alt:'Salon contemporain, visuel d’inspiration pour une rénovation',kicker:'LE PROJET DANS SON ENSEMBLE',title:'Une transformation qui a du sens.',text:'Redistribution des espaces, remise à neuf et finitions : les étapes se pensent ensemble, pour un résultat harmonieux et un lieu adapté à vos usages.'},
  amenagement:{photo:'assets/bathroom.webp',alt:'Salle de bain contemporaine, visuel d’inspiration pour un aménagement',kicker:'LES ESPACES AU SERVICE DES USAGES',title:'Faire mieux avec votre espace.',text:'Agencement, pièces d’eau, revêtements et finitions : imaginez des espaces pratiques, agréables et adaptés à votre façon de vivre ou de travailler.'},
